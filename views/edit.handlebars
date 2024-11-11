@@ -1,0 +1,43 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Art Gallery</h1>
+			{{#if authorised}}
+				<a href="/">Home</a>
+        <a href="/artist">My Artwork</a>
+        <a href="/logout">Log out</a>
+			{{else}}
+				<a href="/login">Log in</a>
+			{{/if}}
+		</header>
+		{{#if msg}}
+ 			<aside>
+				<p class="msg">{{msg}}</p>
+			</aside>
+		{{/if}}
+	<main>
+      <form method = "post">
+        <p>
+          <label for="status">Status</label><br />
+          <select name="status">
+            <option value="for sale">for sale</option>
+            <option value="under offer">under offer</option>
+            <option value="sold">sold</option>
+          </select>
+        </p>
+        <p><input type="submit" value="Update Details"></p>
+      </form>
+	</main>
+	</body>
+</html>

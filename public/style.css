@@ -1,0 +1,229 @@
+
+/* ===== Adds google font Raleway ===== */
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap);
+}
+
+body {
+	  font-family: 'Raleway', sans-serif;
+		margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align:center;
+  padding:20px;
+	font-size: 1.2em;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+
+h3 {
+	font-size: 1em;
+  font-weight: 700;
+}
+
+h2 {
+  text-transform: uppercase;
+	font-size: 1em;
+  font-weight: 700;
+	margin: 1vw;
+	margin-left: 0.8vw;
+} 
+
+/* ===== formats navigation bar ===== */
+
+header {
+  padding:10px;
+	color:#000000;
+  text-decoration: none;
+	display:flex;
+  flex-flow: row wrap;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+header > a {
+  color:#000;
+  padding:35px;
+	font-size: 15px;
+	text-decoration: none;
+  text-transform:uppercase;
+}
+
+header > h1 {
+  padding:20px;
+	font-size: 1.2em;
+	font-weight: 700;
+	letter-spacing: 2px;
+  border-right: 2px solid #000000;
+}
+
+aside{
+  margin:0 auto;
+  width: 15vw;
+  text-align:center;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform:uppercase;
+  border: solid 2px #000;
+}
+/* ===== addProducts Button ===== */
+.addProduct{
+  text-align:center;
+}
+
+.addProduct > a {
+  font-size: 0.8em;
+  background:none;
+  border: solid 2px #000;
+	color:#000;
+  padding:8px;
+  padding-left:40px;
+  padding-right:40px;
+  text-decoration: none;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.addProduct > a:hover{
+  transition: all .2s ease;
+  color:#fff;
+	background-color: #000;
+}
+
+/* ===== Product Cards ===== */
+
+.card_content > img{
+  width:100%;
+}
+
+.card {
+  margin-left:10%;
+  margin-right:10%;
+  margin-top:2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-gap:1em;
+}
+
+ .card_content{
+	text-decoration: none;
+  cursor:pointer;
+}
+
+.card_content > h3{
+  margin:0;
+  padding:2px;
+ 	font-size: 0.8em;
+  font-weight: 300;
+}
+
+.card_content > h2{
+  margin:0;
+  padding: 5px;
+  padding-left:2px;
+	text-transform: uppercase;
+  font-weight: 700;
+ 	font-size: 1em;
+}
+
+.card_content > a{
+  font-size:0.8em;
+  text-decoration:none;
+  color:#000;
+  text-transform: uppercase;
+	background:none;
+  float:right;
+	border:none; 
+  padding:0.2em;
+  cursor:pointer;
+}
+
+/* ===== Forms ===== */
+
+form{
+  margin: 0 auto; 
+  border: solid 2px #000;
+  padding: 30px;
+  padding-bottom:50px;
+  width:30vw;
+  overflow:hidden;
+}
+
+label{
+  font-size:0.8em;
+  font-weight: 700; 
+}
+
+input[type=text],input[type=email],input[type=password]{
+  margin: 8px 0;
+  width:90%;
+  border:none;
+  padding: 5px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: none;
+}
+
+select{
+  margin: 8px 0;
+  width:90%;
+  border:none;
+  padding: 5px;
+  border-bottom: 1px solid #000;
+	width: 26.3vw;
+	-webkit-appearance: none;
+}
+
+
+input[type=submit]{
+  background:none;
+  margin: 8px 0;
+  font-size: 0.8em;
+  border: solid 2px #000;
+	color:#000;
+  padding:8px;
+  padding-left:40px;
+  padding-right:40px;
+  text-decoration: none;
+	text-transform: uppercase;  
+}
+
+input[type=submit]:hover{
+  margin: 8px 0;
+  color:#fff;
+	background-color: #000;  
+}
+
+input[type=file]{
+  margin: 8px 0;
+}
+
+/* ===== TABLES ===== */
+
+table {
+	/* border: 1px solid grey; */
+	border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+	background: #DDD;
+}
+
+td {
+	/* border: 1px solid grey; */
+	padding: 0.5vw;
+	font-size: 1.5vw;
+	width: 25vw;
+}
+
+td:last-child {
+	width: 10vw;
+	text-align: right;
+}

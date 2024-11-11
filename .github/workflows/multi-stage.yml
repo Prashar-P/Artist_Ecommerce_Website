@@ -1,0 +1,50 @@
+#multi stage git action that runs tests and linter
+
+name: gitactions - 5001CEM
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: ['master']
+
+jobs:
+  Linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: install the linter
+        run: npm install 
+      - name: run the linter
+        run: npm run linter
+  
+  UnitTests:
+    runs-on: ubuntu-latest
+        
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: install AVA testing
+        run: npm install 
+      - name: run tests
+        run: npm test
+  
+#tutorial used: https://github.com/marketplace/actions/deploy-to-heroku
+  HerokuDeployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.7.8 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "prasharp-sem1"
+          heroku_email: "priya_prashar@outlook.com"
